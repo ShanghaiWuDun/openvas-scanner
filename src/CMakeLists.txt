@@ -146,7 +146,7 @@ if (CMAKE_SYSTEM_NAME MATCHES "FreeBSD")
 endif (CMAKE_SYSTEM_NAME MATCHES "FreeBSD")
 
 
-target_link_libraries (openvassd openvas_nasl_shared ${LIBOPENVAS_NASL_LDFLAGS}
+target_link_libraries (openvassd openvas_nasl_shared "hiredis" ${LIBOPENVAS_NASL_LDFLAGS}
                        ${LIBOPENVAS_MISC_LDFLAGS}
                        ${LIBGVM_BASE_LDFLAGS}
                        ${GLIB_LDFLAGS} ${GCRYPT_LDFLAGS}

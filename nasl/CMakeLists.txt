@@ -225,7 +225,7 @@ target_link_libraries (openvas_nasl_shared openvas_misc_shared ${GLIB_LDFLAGS}
 
 # Link the openvas-nasl executable
 add_executable (openvas-nasl nasl.c)
-target_link_libraries (openvas-nasl openvas_nasl_shared openvas_misc_shared ${GNUTLS_LDFLAGS} ${LIBSSH_LDFLAGS})
+target_link_libraries (openvas-nasl openvas_nasl_shared openvas_misc_shared "hiredis" ${GNUTLS_LDFLAGS} ${LIBSSH_LDFLAGS})
 
 # Link the openvas-nasl-lint executable
 add_executable (openvas-nasl-lint nasl-lint.c)
