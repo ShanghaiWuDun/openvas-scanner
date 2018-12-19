@@ -229,7 +229,7 @@ target_link_libraries (openvas-nasl openvas_nasl_shared openvas_misc_shared ${GN
 
 # Link the openvas-nasl-lint executable
 add_executable (openvas-nasl-lint nasl-lint.c)
-target_link_libraries (openvas-nasl-lint openvas_nasl_shared openvas_misc_shared ${GLIB_LDFLAGS} ${GIO_LDFLAGS})
+target_link_libraries (openvas-nasl-lint openvas_nasl_shared openvas_misc_shared "hiredis" ${GLIB_LDFLAGS} ${GIO_LDFLAGS})
 
 ## Install
 
